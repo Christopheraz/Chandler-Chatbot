@@ -19,10 +19,10 @@ def main():
                 newstring = newstring + i
 
         if newstring == "":
-            newline = re.sub(r'&\w{4};',"",newline)
+            newline = re.sub(r'&[\w\W]{4};',"",newline)
             if newline != "":
                 num = num + 1
-                if num > 4:
+                if num > 3:
                     print newline.strip()
             newline = ""
         else:
